@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="zh-CN,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/portrait32.jpeg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="写在前面如果有人问我编程入门？如何学习编程？等等问题，我就可以把这个发给他了。 Teach Yourself Programming in Ten Years— Peter Norvig Why is everyone in such a rush?为什么每个人都急于求成？ Walk into any bookstore, and you’ll see how to Teach Yourself">
+<meta property="og:type" content="article">
+<meta property="og:title" content="十年自学编程双语版">
+<meta property="og:url" content="http://yoursite.com/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/index.html">
+<meta property="og:site_name" content="Eric&#39;s Blog">
+<meta property="og:description" content="写在前面如果有人问我编程入门？如何学习编程？等等问题，我就可以把这个发给他了。 Teach Yourself Programming in Ten Years— Peter Norvig Why is everyone in such a rush?为什么每个人都急于求成？ Walk into any bookstore, and you’ll see how to Teach Yourself">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-06-17T07:50:55.000Z">
+<meta property="article:modified_time" content="2020-07-02T08:30:26.757Z">
+<meta property="article:author" content="Eric Yin">
+<meta property="article:tag" content="十年学会编程">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://yoursite.com/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>十年自学编程双语版 | Eric's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Eric's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Learn and Share</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/portrait.JPG">
+      <meta itemprop="name" content="Eric Yin">
+      <meta itemprop="description" content="Stay hungry, Stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eric's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          十年自学编程双语版
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-06-17 15:50:55" itemprop="dateCreated datePublished" datetime="2020-06-17T15:50:55+08:00">2020-06-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-02 16:30:26" itemprop="dateModified" datetime="2020-07-02T16:30:26+08:00">2020-07-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>13k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>12 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>如果有人问我编程入门？如何学习编程？等等问题，我就可以把这个发给他了。</p>
+<h1 id="Teach-Yourself-Programming-in-Ten-Years"><a href="#Teach-Yourself-Programming-in-Ten-Years" class="headerlink" title="Teach Yourself Programming in Ten Years"></a>Teach Yourself Programming in Ten Years</h1><p>— Peter Norvig</p>
+<h2 id="Why-is-everyone-in-such-a-rush"><a href="#Why-is-everyone-in-such-a-rush" class="headerlink" title="Why is everyone in such a rush?"></a>Why is everyone in such a rush?</h2><p>为什么每个人都急于求成？</p>
+<p>Walk into any bookstore, and you’ll see how to <em>Teach Yourself Java in 24 Hours</em> alongside endless variations offering to teach C, SQL, Ruby, Algorithms, and so on in a few days or hours. The Amazon advanced search for <a href="http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&unfiltered=1&field-keywords=&field-author=&field-title=teach+yourself+hours&field-isbn=&field-publisher=&node=&field-p_n_condition-type=&field-feature_browse-bin=&field-subject=&field-language=&field-dateop=After&field-datemod=&field-dateyear=2000&sort=relevanceexprank&Adv-Srch-Books-Submit.x=16&Adv-Srch-Books-Submit.y=5" target="_blank" rel="noopener">title: teach, yourself, hours, since: 2000</a> and found 512 such books. Of the top ten, nine are programming books (the other is about bookkeeping). Similar results come from replacing “teach yourself” with “learn” or “hours” with “days.”</p>
+<p>随便走进一家书店，都会看到类似《在24小时内自学Java》这样的书，旁边也都摆着诸如在几天、几小时之内学会 C 语言，SQL，Ruby，算法等等的书。如果用 Amazon 上的高级搜索，输入： <u>title: teach, yourself, hours, since: 2000</u> 这些关键字来搜索，将会返回512本类似的书。最靠前的10本书中，有9本是编程的书（唯一的例外是一本关于记账的书）。如果把关键字 ”teach yourself” 替换成 ”learn” ，或者将 ”hours” 替换成 ”days” ，返回的结果大同小异。</p>
+<p>The conclusion is that either people are in a big rush to learn about programming, or that programming is somehow fabulously easier to learn than anything else. Felleisen <em>et al.</em> give a nod to this trend in their book <em><a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html" target="_blank" rel="noopener">How to Design Programs</a></em>, when they say “Bad programming is easy. <em>Idiots</em> can learn it in <em>21 days</em>, even if they are <em>dummies</em>.” The Abtruse Goose comic also had <a href="http://abstrusegoose.com/249" target="_blank" rel="noopener">their take</a>.</p>
+<p>这些都告诉我们：人们在学习编程的时候妄图一口吃成胖子，或者认为编程相比起其它事情来，是很容易学的。Felleisen等人编写的《如何设计程序》一书中说道“劣质编程很容易。白痴也可以在21天内学会，就算他们是哑巴。” Abtruse Goose的漫画也表达了同样的看法。</p>
+<a id="more"></a>
+
+<p>Let’s analyze what a title like <em><a href="http://www.amazon.com/Sams-Teach-Yourself-Hours-5th/dp/0672333317/ref=sr_1_6?s=books&ie=UTF8&qid=1412708443&sr=1-6&keywords=learn+c%2B%2B+days" target="_blank" rel="noopener">Teach Yourself C++ in 24 Hours</a></em> could mean:</p>
+<p>让我们来分析一下 “在24小时自学C++” 这个标题：</p>
+<ul>
+<li><p>Teach Yourself （自学）:</p>
+<p>In 24 hours you won’t have time to write several significant programs, and learn from your successes and failures with them. You won’t have time to work with an experienced programmer and understand what it is like to live in a C++ environment. In short, you won’t have time to learn much. So the book can only be talking about a superficial familiarity, not a deep understanding. As Alexander Pope said, a little learning is a dangerous thing.</p>
+<p>24小时之内。你没有时间写几个有意义的程序，也不能从你的成功或失败中学到经验；你没有时间和一个有丰富经验的程序员一起工作，也不能理解在 C++ 环境中编程的感受。简而言之，你没有时间学习很多东西。因此，这本书只能说是肤浅的熟悉，而不是深刻的理解。正如亚历山大·波普（Alexander Pope）所说：一知半解最危险。</p>
+</li>
+<li><p>C++:</p>
+<p>In 24 hours you might be able to learn some of the syntax of C++ (if you already know another language), but you couldn’t learn much about how to use the language. In short, if you were, say, a Basic programmer, you could learn to write programs in the style of Basic using C++ syntax, but you couldn’t learn what C++ is actually good (and bad) for. So what’s the point? Alan Perlis once said: “A language that doesn’t affect the way you think about programming, is not worth knowing”. One possible point is that you have to learn a tiny bit of C++ (or more likely, something like JavaScript or Processing) because you need to interface with an existing tool to accomplish a specific task. But then you’re not learning how to program; you’re learning to accomplish that task.</p>
+<p>在24小时内，你可能可以学习C ++的某些语法（如果您已经知道另一种语言），但是你对如何使用该语言的了解却不多。简而言之，如果你是一名 Basic 程序员，则可以学习以 Basic 风格 编写 C ++ 语法的程序，但是你不会了解 C ++ 的优点（或缺点）。那有什么意义呢？艾伦·珀利斯（Alan Perlis）曾经说过：“不影响你编程思维方式的语言，是不值得了解的”。一个可能的场景是，因为您需要与现有工具交互以完成特定任务，你学习一小部分C ++（或是 JavaScript 或Processing ）。这样的话，你其实没有学习编程，你只是完成任务。</p>
+</li>
+<li><p>in 24 Hours (在24小时内):</p>
+<p>Unfortunately, this is not enough, as the next section shows.</p>
+<p>很不幸，24小时太少了，原因下面告诉你</p>
+</li>
+</ul>
+<h2 id="Teach-Yourself-Programming-in-Ten-Years-1"><a href="#Teach-Yourself-Programming-in-Ten-Years-1" class="headerlink" title="Teach Yourself Programming in Ten Years"></a>Teach Yourself Programming in Ten Years</h2><p>（十年自学编程）</p>
+<p>Researchers (<a href="http://www.amazon.com/exec/obidos/ASIN/034531509X/" target="_blank" rel="noopener">Bloom (1985)</a>, <a href="http://norvig.com/21-days.html#bh" target="_blank" rel="noopener">Bryan &amp; Harter (1899)</a>, <a href="http://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank" rel="noopener">Hayes (1989)</a>, <a href="http://norvig.com/21-days.html#sc" target="_blank" rel="noopener">Simmon &amp; Chase (1973)</a>) have shown it takes about ten years to develop expertise in any of a wide variety of areas, including chess playing, music composition, telegraph operation, painting, piano playing, swimming, tennis, and research in neuropsychology and topology. The key is <em>deliberative</em> practice: not just doing it again and again, but challenging yourself with a task that is just beyond your current ability, trying it, analyzing your performance while and after doing it, and correcting any mistakes. Then repeat. And repeat again. There appear to be no real shortcuts: even Mozart, who was a musical prodigy at age 4, took 13 more years before he began to produce world-class music. In another genre, the Beatles seemed to burst onto the scene with a string of #1 hits and an appearance on the Ed Sullivan show in 1964. But they had been playing small clubs in Liverpool and Hamburg since 1957, and while they had mass appeal early on, their first great critical success, <em>Sgt. Peppers</em>, was released in 1967.</p>
+<p>研究人员表明，要在某个领域成为专家，大约需要十年，其中包括下棋，音乐创作，电报操作，绘画，钢琴，游泳，网球以及神经心理学和拓扑学研究。其关键在于 <em>刻意练习</em>：不仅要一遍又一遍地做，还要用一项超越您当前能力的任务来挑战自己，尝试一下，分析执行前后的表现，并纠正错误。然后重复，再重复。没有捷径：即使是4岁的音乐天才莫扎特，也花了13年的时间，才开始创作世界级的音乐。在另一种流派中，甲壳虫乐队似乎突然间爆出一连串的＃1热门歌曲，并在1964年的埃德·沙利文（Ed Sullivan）演出中露面。但自1957年以来，他们一直在利物浦和汉堡的小型俱乐部开始演出了，那时他们已经有具有巨大的吸引力了，他们的第一个重大成功专辑： Sgt. Peppers 于1967年发行。</p>
+<p><a href="http://www.amazon.com/Outliers-Story-Success-Malcolm-Gladwell/dp/0316017922" target="_blank" rel="noopener">Malcolm Gladwell</a> has popularized the idea, although he concentrates on 10,000 hours, not 10 years. Henri Cartier-Bresson (1908-2004) had another metric: “Your first 10,000 photographs are your worst.” (He didn’t anticipate that with digital cameras, some people can reach that mark in a week.) True expertise may take a lifetime: Samuel Johnson (1709-1784) said “Excellence in any department can be attained only by the labor of a lifetime; it is not to be purchased at a lesser price.” And Chaucer (1340-1400) complained “the lyf so short, the craft so long to lerne.” Hippocrates (c. 400BC) is known for the excerpt “ars longa, vita brevis”, which is part of the longer quotation “Ars longa, vita brevis, occasio praeceps, experimentum periculosum, iudicium difficile”, which in English renders as “Life is short, [the] craft long, opportunity fleeting, experiment treacherous, judgment difficult.” Of course, no single number can be the final answer: it doesn’t seem reasonable to assume that all skills (e.g., programming, chess playing, checkers playing, and music playing) could all require exactly the same amount of time to master, nor that all people will take exactly the same amount of time. As Prof. <a href="http://www.amazon.com/K.-Anders-Ericsson/e/B000APB8AQ/ref=dp_byline_cont_book_1" target="_blank" rel="noopener">K. Anders Ericsson</a> puts it, “In most domains it’s remarkable how much time even the most talented individuals need in order to reach the highest levels of performance. The 10,000 hour number just gives you a sense that we’re talking years of 10 to 20 hours a week which those who some people would argue are the most innately talented individuals still need to get to the highest level.”</p>
+<p>马尔科姆·格拉德威尔（Malcolm Gladwell）让这个理论广为人知，尽管他说的是 10,000 小时而不是10年。2亨利·卡蒂埃·布雷森（Henri Cartier-Bresson，1908-2004）的另一个标准是：“您的前10,000张照片是最糟糕的。” （他没想到后来的数码相机，能让人在一个星期内达到这个目标。）真的达到专业可能需要一辈子：塞缪尔·约翰逊（Samuel Johnson（1709-1784））说：“任何领域的出色表现，要用一生的努力；不要妄想一蹴而就。” Chaucer（1340-1400）埋怨：“ 生命如此短暂，掌握技艺却要如此长久。”希波克拉底（约公元前400年）以摘录“ ars longa，vita brevis”而著称，这这段话更长的版本是“ Ars longa，vita brevis，occasio praeceps，experimentum perculosum，iudicium difficile” ，翻译成中文大意是：生命短暂，学习无止境，机会稍纵即逝，实验十分危险，判断困难重重。当然，没有一个数字可以作为最终答案：因为如果说所有技能（例如编程、下棋、音乐）都需要完全相同的时间来掌握，是不合理的，况且不会每个人都花费完全相同的时间。正如 K. Anders Ericsson 教授所说：“在大多数领域，即使是最有才华的人，也需要很多时间才能达到最高水平。10,000小时，只是告诉你们一个大概的时间，那些最具天赋的人，也需要持续数年，每周学习 10 - 20 个小时来达到最高水平。”</p>
+<h2 id="So-You-Want-to-be-a-Programmer"><a href="#So-You-Want-to-be-a-Programmer" class="headerlink" title="So You Want to be a Programmer"></a>So You Want to be a Programmer</h2><p>如果你想成为一个程序员</p>
+<p>Here’s my recipe for programming success:</p>
+<p>这里是我编程成功的秘诀：</p>
+<ul>
+<li><p>Get interested in programming, and do some because it is fun. Make sure that it keeps being enough fun so that you will be willing to put in your ten years/10,000 hours.</p>
+<p>要对编程感兴趣，要从中能获得快乐。保证编程足够有趣，这样才能让你花10年或者10，000个小时在上面。</p>
+</li>
+<li><p>Program. The best kind of learning is learning by doing. To put it more technically, “the maximal level of performance for individuals in a given domain is not attained automatically as a function of extended experience, but the level of performance can be increased even by highly experienced individuals as a result of deliberate efforts to improve.”(p. 366) and “the most effective learning requires a well-defined task with an appropriate difficulty level for the particular individual, informative feedback, and opportunities for repetition and corrections of errors.” (p. 20-21) The book <a href="http://www.amazon.com/exec/obidos/ASIN/0521357349" target="_blank" rel="noopener">Cognition in Practice: Mind, Mathematics, and Culture in Everyday Life</a> is an interesting reference for this viewpoint.</p>
+<p>编程。最好的学习方法是在实践中学习。从技术上更准确地说，“某个领域内一个人人的最高水平，不是这个人经验增长了以后而自动获得的，因为即使是经验丰富的个人也要通过刻意练习来提高水平”，而且，“最有效的学习需要给你：一个适当难度且有明确定义的任务，有信息反馈，以及重复和纠正错误的机会。” 这些观点可以在《实践中的认知：日常生活中的思维，数学和文化》这本书中找到。</p>
+</li>
+<li><p>Talk withother programmers; read other programs. This is more important than any book or training course.</p>
+<p>和其他的程序员交流；阅读别人的代码。这远比看书或者参加培训课程重要。</p>
+</li>
+<li><p>If you want, put in four years at a college (or more at a graduate school). This will give you access to some jobs that require credentials, and it will give you a deeper understanding of the field, but if you don’t enjoy school, you can (with some dedication) get similar experience on your own or on the job. In any case, book learning alone won’t be enough. “Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter” says Eric Raymond, author of The New Hacker’s Dictionary. One of the best programmers I ever hired had only a High School degree; he’s produced a lot of great software, has his own news group, and made enough in stock options to buy his own nightclub.</p>
+<p>如果你愿意，花四年时间在大学读个计算机专业（或者再读个研）。这能让你获得一些需要学位的工作机会，也使您对该领域有更深入的了解。但是，如果你不喜欢上线，自学或者在工作（都要带有热情）中也能获得相同的经验。无论如何，光靠书本是不够的。《新黑客词典》的作者埃里克·雷蒙德（Eric Raymond）说：“计算机科学教育不能使任何人成为专家程序员，就像仅研究画笔和颜料不能使人成为专业画家。” 我雇佣过的最好的程序员只有高中文凭，但他创造了许多伟大的软件，他有自己的新闻组，通过股票赚到了足够多的钱买下自己的夜总会。</p>
+</li>
+<li><p>Work on projects with other programmers. Be the best programmer on some projects; be the worst on some others. When you’re the best, you get to test your abilities to lead a project, and to inspire others with your vision. When you’re the worst, you learn what the masters do, and you learn what they don’t like to do (because they make you do it for them).</p>
+<p>与其他程序员一起从事项目。在某些项目中成为最好的程序员；在另一些项目中当最差劲的程序员。当你做出色程序员时，就可以测试自己领导项目的能力，并用自己的远见启发他人。当你是项目中最差的程序员时，你要学习大牛们的做法，并了解他们不喜欢做的（因为他们让你来做）。</p>
+</li>
+<li><p>Work on projects <em>after</em> other programmers. Understand a program written by someone else. See what it takes to understand and fix it when the original programmers are not around. Think about how to design your programs to make it easier for those who will maintain them after you.</p>
+<p>接手别人的项目。理解别人编写的程序。当原程序员不在时，看看你要花多久去理解和修复它。考虑如何设计程序，可以让那些在您之后维护它们的人更轻松。</p>
+</li>
+<li><p>Learn at least a half dozen programming languages. Include one language that emphasizes class abstractions (like Java or C++), one that emphasizes functional abstraction (like Lisp or ML or Haskell), one that supports syntactic abstraction (like Lisp), one that supports declarative specifications (like Prolog or C++ templates), and one that emphasizes parallelism (like Clojure or Go).</p>
+<p>至少学习6种编程语言。包括一种支持类抽象的(例如<code>Java</code>或者<code>C++</code>)，一种支持函数抽象的(<code>Lisp</code>, <code>ML</code>或者<code>Haskell</code>)，一种支持语法抽象的(如<code>Lisp</code>)，一种支持声明式编程的(<code>Prolog</code>或者<code>C++模板</code>)，还有一种支持并发的(<code>Clojure</code>或<code>Go</code>)。</p>
+</li>
+<li><p>Remember that there is a “computer” in “computer science”. Know how long it takes your computer to execute an instruction, fetch a word from memory (with and without a cache miss), read consecutive words from disk, and seek to a new location on disk. (Answer here)</p>
+<p>记住“计算机科学”包含“计算机”这个词。了解计算机需要多长时间执行一条指令，多长时间从内存中获取一个字(word)（缓存是否命中的情况），从磁盘中连续读取字节要多久？以及在硬盘中寻址定位要多久？(答案见文末)</p>
+</li>
+<li><p>Get involved in a language standardization effort. It could be the ANSI C++ committee, or it could be deciding if your local coding style will have 2 or 4 space indentation levels. Either way, you learn about what other people like in a language, how deeply they feel so, and perhaps even a little about why they feel so.</p>
+<p>参与语言的标准化工作。往大了说，你可以试着加入ANSI C++委员会，往小了讲，你也可以从自己的代码规范入手，限定代码缩进是需要2个空格还是4个空格。无论哪样，你都需要了解其他人对于一种语言喜欢它什么，到底有多喜欢，甚至要知道一点他们为什么喜欢。</p>
+</li>
+<li><p>Have the good sense to <strong>get off</strong> the language standardization effort as quickly as possible.</p>
+<p>具有良好的意识，能尽快适应语言标准化后的工作。</p>
+</li>
+</ul>
+<p>With all that in mind, its questionable how far you can get just by book learning. Before my first child was born, I read all the <em>How To</em> books, and still felt like a clueless novice. 30 Months later, when my second child was due, did I go back to the books for a refresher? No. Instead, I relied on my personal experience, which turned out to be far more useful and reassuring to me than the thousands of pages written by experts.</p>
+<p>要掌握上面所说的所有内容，光靠看书学习应该是很难做到的。在我第一个孩子出生前，我几乎阅读了市面上所有的《如何…》书籍，但是我读完了以后还是觉得没有任何头绪。30个月以后，当我第二个孩子即将出生时，我难道要重温一下那些书么？不！相反，我此时更依赖我的个人经验，这些经验相比于那些上千页专家写的的书籍，更加有效和让我放心（地去育儿）。</p>
+<p>Fred Brooks, in his essay <em><a href="http://en.wikipedia.org/wiki/No_Silver_Bullet" target="_blank" rel="noopener">No Silver Bullet</a></em> identified a three-part plan for finding great software designers:</p>
+<p>弗雷德·布鲁克斯（Fred Brooks）在他的论文《没有银弹》中给出了三条培养伟大软件设计师的建议：</p>
+<ol>
+<li><p>Systematically identify top designers as early as possible.</p>
+<p>尽早系统地确定顶级设计师。</p>
+</li>
+<li><p>Assign a career mentor to be responsible for the development of the prospect and carefully keep a career file.</p>
+<p>安排一个职业导师，为有潜力的人指点迷津，并仔细保存职业档案。</p>
+</li>
+<li><p>Provide opportunities for growing designers to interact and stimulate each other.</p>
+<p>为成长中的设计师提供互动和相互刺激的机会。</p>
+</li>
+</ol>
+<p>This assumes that some people already have the qualities necessary for being a great designer; the job is to properly coax them along. <a href="http://www-pu.informatik.uni-tuebingen.de/users/klaeren/epigrams.html" target="_blank" rel="noopener">Alan Perlis</a> put it more succinctly: “Everyone can be taught to sculpt: Michelangelo would have had to be taught how not to. So it is with the great programmers”. Perlis is saying that the greats have some internal quality that transcends their training. But where does the quality come from? Is it innate? Or do they develop it through diligence? As Auguste Gusteau (the fictional chef in <em>Ratatouille</em>) puts it, “anyone can cook, but only the fearless can be great.” I think of it more as willingness to devote a large portion of one’s life to deliberative practice. But maybe <em>fearless</em> is a way to summarize that. Or, as Gusteau’s critic, Anton Ego, says: “Not everyone can become a great artist, but a great artist can come from anywhere.”</p>
+<p>假定某些人已经具备成为优秀设计师所需的潜质；工作可能对他们是一种摧残。 艾伦·佩利斯（Alan Perlis）更为直接地说：“任何人都可以被‘教’成一个雕塑匠，但米开朗基罗则被‘教’如何不要成为一个雕塑匠，因为他要做的是雕塑大师。这个道理放到编程大师身上同样管用。”佩利斯说，伟大的人有一种内在的特质，这种特质往往比接受训练更重要。但是特质从何而来？是天生的吗？还是勤奋所得？正如奥古斯特·古斯托（Auguste Gusteau 电影《料理鼠王》的厨师）所说，“任何人都可以做饭，但只有无所畏惧的 (fearless) 人，才能成就非凡。” 我认为他的意思就是：愿意将一生大部分时间奉献给刻意练习的人（才能成为大师）。也许电影中用 fearless 来概括了而已。或者，正如古斯托（Gusteau）的批评家安东·埃格（Anton Ego《料理鼠王》中的美食评论家）所说：“并非每个人都能成为一名伟大的艺术家，但是伟大的艺术家可以来自任何地方。”</p>
+<p>So go ahead and buy that Java/Ruby/Javascript/PHP book; you’ll probably get some use out of it. But you won’t change your life, or your real overall expertise as a programmer in 24 hours or 21 days. How about working hard to continually improve over 24 months? Well, now you’re starting to get somewhere…</p>
+<p>所以，尽管买 Java/Ruby/Javascript/PHP 的书吧。你可能会从中学到点儿有用的东西。但作为一个程序员，在 21 天内或 24 小时内改变你的人生，或者提高你实际的编程水平，这是不可能的。你尝试过连续 24 个月不间断的努力提高自己么？应该没有吧，现在你该上路了……</p>
+<hr>
+<h3 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h3><p>典型PC系统各种操作指令的大概时间</p>
+<p>执行基本命令1/1,000,000,000 sec = 1 nanosec</p>
+<p>从一级缓存中读取数据 0.5 nanosec</p>
+<p>分支误预测 5 nanosec</p>
+<p>从二级缓存中读取数据 7 nanosec</p>
+<p>互斥加锁/解锁 25 nanosec</p>
+<p>从主内存中获取数据 100 nanosec</p>
+<p>通过1G bps 的网络发送2K 字节 20,000 nanosec</p>
+<p>从内存中顺序读取1MB数据 250,000 nanosec</p>
+<p>从新的磁盘位置获取数据(随机读取) 8,000,000 nanosec</p>
+<p>从磁盘中顺序读取1MB 数据 20,000,000 nanosec</p>
+<p>从美国发送一个报文包到欧洲再返回 150 milliseconds = 150,000,000 nanosec</p>
+<hr>
+<h2 id="References-参考文献"><a href="#References-参考文献" class="headerlink" title="References 参考文献"></a>References 参考文献</h2><p>Bloom, Benjamin (ed.) <em><a href="http://www.amazon.com/exec/obidos/ASIN/034531509X" target="_blank" rel="noopener">Developing Talent in Young People</a></em>, Ballantine, 1985.</p>
+<p>Brooks, Fred, <em><a href="http://citeseer.nj.nec.com/context/7718/0" target="_blank" rel="noopener">No Silver Bullets</a></em>, IEEE Computer, vol. 20, no. 4, 1987, p. 10-19.</p>
+<p>Bryan, W.L. &amp; Harter, N. “Studies on the telegraphic language: The acquisition of a hierarchy of habits. <em>Psychology Review</em>, 1899, 8, 345-375</p>
+<p>Hayes, John R., <em><a href="http://www.amazon.com/exec/obidos/ASIN/0805803092" target="_blank" rel="noopener">Complete Problem Solver</a></em> Lawrence Erlbaum, 1989.</p>
+<p>Chase, William G. &amp; Simon, Herbert A. <a href="http://books.google.com/books?id=dYPSHAAACAAJ&dq=" target="_blank" rel="noopener"perception+in+chess"+simon&ei=z4PyR5iIAZnmtQPbyLyuDQ">“Perception in Chess”</a> <em>Cognitive Psychology</em>, 1973, 4, 55-81.</p>
+<p>Lave, Jean, <em><a href="http://www.amazon.com/exec/obidos/ASIN/0521357349" target="_blank" rel="noopener">Cognition in Practice: Mind, Mathematics, and Culture in Everyday Life</a></em>, Cambridge University Press, 1988.</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B/" rel="tag"># 十年学会编程</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/05/29/2020-Macbook-%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/" rel="prev" title="2020 Macbook 选购指南">
+      <i class="fa fa-chevron-left"></i> 2020 Macbook 选购指南
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Teach-Yourself-Programming-in-Ten-Years"><span class="nav-number"></span> <span class="nav-text">Teach Yourself Programming in Ten Years</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-is-everyone-in-such-a-rush"><span class="nav-number">1.</span> <span class="nav-text">Why is everyone in such a rush?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Teach-Yourself-Programming-in-Ten-Years-1"><span class="nav-number">2.</span> <span class="nav-text">Teach Yourself Programming in Ten Years</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#So-You-Want-to-be-a-Programmer"><span class="nav-number">3.</span> <span class="nav-text">So You Want to be a Programmer</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#答案"><span class="nav-number">3.1.</span> <span class="nav-text">答案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#References-参考文献"><span class="nav-number">4.</span> <span class="nav-text">References 参考文献</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Eric Yin"
+      src="/images/portrait.JPG">
+  <p class="site-author-name" itemprop="name">Eric Yin</p>
+  <div class="site-description" itemprop="description">Stay hungry, Stay foolish</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/EricYsh" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;EricYsh" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://twitter.com/Eric_Yin_01" title="Twitter → https:&#x2F;&#x2F;twitter.com&#x2F;Eric_Yin_01" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Eric Yin</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">17k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">16 分钟</span>
+</div>
+
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+
+<div class="powered-by">
+  <i class="fa fa-user-md"></i>
+  <span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>&nbsp;&nbsp;| 
+  </span>
+  <span id="busuanzi_container_site_pv">
+      &nbsp;本站访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+
+  </div>
+  </div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+<script src="/js/bookmark.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'bhXBIR7LjKYTeABOt8HtFq5s-gzGzoHsz',
+      appKey     : 'o30ht6J6DKjrBPGs550eVadM',
+      placeholder: "",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+</body>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="0,0,0" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+</html>
