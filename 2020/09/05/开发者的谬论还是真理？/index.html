@@ -22,30 +22,33 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Stay hungry, Stay foolish">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Eric&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="前言又发现一篇好文，想自己翻译留存；如果你是将要走上编程，或已经在编程路上的人，相信这篇文章会给你很大的启发。 与我翻译的上一篇文章一样，我也选择放双语，供有英文能力的人参照， 毕竟我的翻译会带有我的主观色彩，并且也可能误翻，所以有能力的话还是建议去读原版（点击下方标题直达）。 The Greatest Developer Fallacy Or The Wisest Words You’ll Ev">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发者的谬论还是真理？">
+<meta property="og:url" content="http://yoursite.com/2020/09/05/%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E8%B0%AC%E8%AE%BA%E8%BF%98%E6%98%AF%E7%9C%9F%E7%90%86%EF%BC%9F/index.html">
 <meta property="og:site_name" content="Eric&#39;s Blog">
-<meta property="og:description" content="Stay hungry, Stay foolish">
+<meta property="og:description" content="前言又发现一篇好文，想自己翻译留存；如果你是将要走上编程，或已经在编程路上的人，相信这篇文章会给你很大的启发。 与我翻译的上一篇文章一样，我也选择放双语，供有英文能力的人参照， 毕竟我的翻译会带有我的主观色彩，并且也可能误翻，所以有能力的话还是建议去读原版（点击下方标题直达）。 The Greatest Developer Fallacy Or The Wisest Words You’ll Ev">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-09-05T06:57:53.000Z">
+<meta property="article:modified_time" content="2020-09-11T09:59:47.661Z">
 <meta property="article:author" content="Eric Yin">
+<meta property="article:tag" content="好文">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2020/09/05/%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E8%B0%AC%E8%AE%BA%E8%BF%98%E6%98%AF%E7%9C%9F%E7%90%86%EF%BC%9F/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Eric's Blog</title>
+  <title>开发者的谬论还是真理？ | Eric's Blog</title>
   
 
 
@@ -160,9 +163,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -178,10 +182,9 @@
       <meta itemprop="name" content="Eric's Blog">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/09/05/%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E8%B0%AC%E8%AE%BA%E8%BF%98%E6%98%AF%E7%9C%9F%E7%90%86%EF%BC%9F/" class="post-title-link" itemprop="url">开发者的谬论还是真理？</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          开发者的谬论还是真理？
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -214,6 +217,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
   
   <span class="post-meta-item">
     
@@ -252,7 +262,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>又发现一篇好文，想自己翻译留存；如果你是将要走上编程，或已经在编程路上的人，相信这篇文章会给你很大的启发。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>又发现一篇好文，想自己翻译留存；如果你是将要走上编程，或已经在编程路上的人，相信这篇文章会给你很大的启发。</p>
 <p>与我翻译的上一篇文章一样，我也选择放双语，供有英文能力的人参照， 毕竟我的翻译会带有我的主观色彩，并且也可能误翻，所以有能力的话还是建议去读原版（点击下方标题直达）。</p>
 <h2 id="The-Greatest-Developer-Fallacy-Or-The-Wisest-Words-You’ll-Ever-Hear"><a href="#The-Greatest-Developer-Fallacy-Or-The-Wisest-Words-You’ll-Ever-Hear" class="headerlink" title="The Greatest Developer Fallacy Or The Wisest Words You’ll Ever Hear?"></a><a href="https://skorks.com/2011/02/the-greatest-developer-fallacy-or-the-wisest-words-youll-ever-hear/" target="_blank" rel="noopener">The Greatest Developer Fallacy Or The Wisest Words You’ll Ever Hear?</a></h2><h2 id="“我会在我需要的时候再学！“-开发者最大的谬论还是真理？"><a href="#“我会在我需要的时候再学！“-开发者最大的谬论还是真理？" class="headerlink" title="“我会在我需要的时候再学！“ 开发者最大的谬论还是真理？"></a><strong>“我会在我需要的时候再学！</strong>“ 开发者最大的谬论还是真理？</h2><p>（注：直译标题是不通的，要结合文章第一句一起看，所以中文标题这样翻译了）</p>
 <p>“<em>I will learn it when I need it</em>”! I’ve heard that phrase a lot over the years; it seems like a highly pragmatic attitude to foster when you’re in an industry as fast-paced as software development. On some level it actually IS quite pragmatic, but on another level I am annoyed by the phrase. It has become a mantra for our whole industry which hasn’t changed said industry for the better. The problem is this, <strong>in the guise of sounding like a wise and practical developer, people use it as an excuse to coast</strong>. There is too much stuff to know, it is necessary to be able to pick certain things up as you go along – part of the job. But, there is a difference between having to “pick up” some knowledge as you go along and doing absolutely everything just-in-time.</p>
@@ -274,717 +284,40 @@
 <h2 id="Why-Should-I-Care"><a href="#Why-Should-I-Care" class="headerlink" title="Why Should I Care"></a>Why Should I Care</h2><p><strong>Working with experts is freaking awesome</strong>. You may have experienced it before, everything they say is something new and interesting, you learn new tricks with every line of code, you can almost feel your brain expanding :). You want to learn from the experts, so it’s really sad when you can’t find any. Since everyone is only learning when they “<em>need it</em>”, noone can teach anything to anyone. The chunk of wisdom here is this, you want to work with experts, but the experts also want to work with experts, so <strong>what are you doing to make sure the experts want to work with you</strong>? Being able to learn something when you need it is a good skill to have, but you can not let it be your philosophy as a developer. Yes it is a big industry you can’t learn everything, so pick something and make sure you know it backwards, if you’re curious enough to follow up on the interesting bits, you’ll find you have a decent grasp of a lot of other stuff at the end. And if you do a good enough job, other super-awesome-smart people are going to want to come and hang around you cause they’ll be able to learn something from you and you’ll be able to learn much from them. Everybody will be a winner.</p>
 <p><strong>和高手在一起工作真是超爽无比</strong>。你可能以前经历过，他们所说的一切都是新颖有趣的，您在每行代码中学习新技巧，你几乎可以感觉到你的大脑在不断拓展。你想向高手学习，所以，如果你身边没有高手，那真是太糟糕了。由于每个人只有在“需要”时才学习，所以没有人可以教任何东西。这里的一大块智慧是，您想与专家一起工作，但专家也希望与专家一起工作，<strong>那么您在做什么以确保专家愿意与您一起工作？</strong>按需所学也许是一个不错的技能，但其不应该成为程序员的价值观。是的，这是一个巨大的行业你不可能学习所有的东西，所以，你需要有所选择地把其学精，只要你有足够的好奇心去跟从你的兴趣，你会发现最终你会真正掌握很多很多其它的东西。而且，如果您的工作做得足够好，那么其它的超级牛人都会想要和你一起工作，因为他们可以从你这学到东西，而你又可以从他们那里学到很多东西。这样一来，每个人都会成为赢家。</p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E5%A5%BD%E6%96%87/" rel="tag"># 好文</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/portrait.JPG">
-      <meta itemprop="name" content="Eric Yin">
-      <meta itemprop="description" content="Stay hungry, Stay foolish">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eric's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/" class="post-title-link" itemprop="url">十年自学编程双语版</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-06-17 15:50:55" itemprop="dateCreated datePublished" datetime="2020-06-17T15:50:55+08:00">2020-06-17</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-05 14:58:53" itemprop="dateModified" datetime="2020-09-05T14:58:53+08:00">2020-09-05</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%BC%96%E7%A8%8B/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>13k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>12 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>如果有人问我编程入门？如何学习编程？等等问题，我就可以把这个发给他了。</p>
-<h1 id="Teach-Yourself-Programming-in-Ten-Years"><a href="#Teach-Yourself-Programming-in-Ten-Years" class="headerlink" title="Teach Yourself Programming in Ten Years"></a>Teach Yourself Programming in Ten Years</h1><p>— Peter Norvig</p>
-<h2 id="Why-is-everyone-in-such-a-rush"><a href="#Why-is-everyone-in-such-a-rush" class="headerlink" title="Why is everyone in such a rush?"></a>Why is everyone in such a rush?</h2><p>为什么每个人都急于求成？</p>
-<p>Walk into any bookstore, and you’ll see how to <em>Teach Yourself Java in 24 Hours</em> alongside endless variations offering to teach C, SQL, Ruby, Algorithms, and so on in a few days or hours. The Amazon advanced search for <a href="http://www.amazon.com/gp/search/ref=sr_adv_b/?search-alias=stripbooks&unfiltered=1&field-keywords=&field-author=&field-title=teach+yourself+hours&field-isbn=&field-publisher=&node=&field-p_n_condition-type=&field-feature_browse-bin=&field-subject=&field-language=&field-dateop=After&field-datemod=&field-dateyear=2000&sort=relevanceexprank&Adv-Srch-Books-Submit.x=16&Adv-Srch-Books-Submit.y=5" target="_blank" rel="noopener">title: teach, yourself, hours, since: 2000</a> and found 512 such books. Of the top ten, nine are programming books (the other is about bookkeeping). Similar results come from replacing “teach yourself” with “learn” or “hours” with “days.”</p>
-<p>随便走进一家书店，都会看到类似《在24小时内自学Java》这样的书，旁边也都摆着诸如在几天、几小时之内学会 C 语言，SQL，Ruby，算法等等的书。如果用 Amazon 上的高级搜索，输入： <u>title: teach, yourself, hours, since: 2000</u> 这些关键字来搜索，将会返回512本类似的书。最靠前的10本书中，有9本是编程的书（唯一的例外是一本关于记账的书）。如果把关键字 ”teach yourself” 替换成 ”learn” ，或者将 ”hours” 替换成 ”days” ，返回的结果大同小异。</p>
-<p>The conclusion is that either people are in a big rush to learn about programming, or that programming is somehow fabulously easier to learn than anything else. Felleisen <em>et al.</em> give a nod to this trend in their book <em><a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html" target="_blank" rel="noopener">How to Design Programs</a></em>, when they say “Bad programming is easy. <em>Idiots</em> can learn it in <em>21 days</em>, even if they are <em>dummies</em>.” The Abtruse Goose comic also had <a href="http://abstrusegoose.com/249" target="_blank" rel="noopener">their take</a>.</p>
-<p>这些都告诉我们：人们在学习编程的时候妄图一口吃成胖子，或者认为编程相比起其它事情来，是很容易学的。Felleisen等人编写的《如何设计程序》一书中说道“劣质编程很容易。白痴也可以在21天内学会，就算他们是哑巴。” Abtruse Goose的漫画也表达了同样的看法。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/29/2020-Macbook-%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/portrait.JPG">
-      <meta itemprop="name" content="Eric Yin">
-      <meta itemprop="description" content="Stay hungry, Stay foolish">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eric's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/05/29/2020-Macbook-%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/" class="post-title-link" itemprop="url">2020 Macbook 选购指南</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-05-29 13:03:36 / 修改时间：13:15:26" itemprop="dateCreated datePublished" datetime="2020-05-29T13:03:36+08:00">2020-05-29</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MacBook/" itemprop="url" rel="index"><span itemprop="name">MacBook</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/05/29/2020-Macbook-%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/05/29/2020-Macbook-%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h4><p>截止2020-5-4，2020 全系 MacBook 都更新完毕，这次的 MacBook 可以说是近几年来最值得购买的，所以本篇文章就是 2020 MacBook 系列选购指南。包括（1. MBA，2. MBP-13.3-2，3. MBP-13.3-4，4. MBP-16）</p>
-<h4 id="综述："><a href="#综述：" class="headerlink" title="综述："></a>综述：</h4><ol>
-<li>键盘：全系 Magic keyboard，打字舒服，也不会出现像蝶式键盘的各种问题。</li>
-<li>扬声器：都非常棒，虽然四个系列扬声器都不太一样，但是相比前代都有很高的提升，且比市面上大部分电脑扬声器都要好，16寸是最好，总之价格越贵的款越好。</li>
-<li>选配：在能负担范围买配置最高的。MacBook 因为全系的T2芯片，后续不能自己改装配置，所以不确定自己需求的时候，宁可多配，也不要省钱。同时也能让这台电脑多用几年。</li>
-<li>比较会着重在 MacBook Air 和13寸的 MacBook Pro，16寸版本跟他们区别很大。</li>
-<li>MacBook Air 和 13寸 MacBook Pro 的重量区别真的可以忽略不计！</li>
-<li>没有必要刻意关注性能，因为你买回来不是去跑分的，实际使用的时候，你怎么知道快了还是慢了呢？跑分的性能也不是你日常使用的性能呀。</li>
-</ol>
-<h4 id="分述："><a href="#分述：" class="headerlink" title="分述："></a>分述：</h4>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/05/29/2020-Macbook-%E9%80%89%E8%B4%AD%E6%8C%87%E5%8D%97/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/17/%E5%8D%81%E5%B9%B4%E5%AD%A6%E4%BC%9A%E7%BC%96%E7%A8%8B%E5%8F%8C%E8%AF%AD%E7%89%88/" rel="prev" title="十年自学编程双语版">
+      <i class="fa fa-chevron-left"></i> 十年自学编程双语版
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/24/%E7%BB%99Mac%E5%8E%9F%E7%94%9F%E8%AF%8D%E5%85%B8%E6%89%A9%E5%B1%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/portrait.JPG">
-      <meta itemprop="name" content="Eric Yin">
-      <meta itemprop="description" content="Stay hungry, Stay foolish">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eric's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/24/%E7%BB%99Mac%E5%8E%9F%E7%94%9F%E8%AF%8D%E5%85%B8%E6%89%A9%E5%B1%95/" class="post-title-link" itemprop="url">给Mac原生词典扩展</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-24 20:06:56" itemprop="dateCreated datePublished" datetime="2020-04-24T20:06:56+08:00">2020-04-24</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-25 13:36:58" itemprop="dateModified" datetime="2020-04-25T13:36:58+08:00">2020-04-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mac%E6%8A%80%E5%B7%A7/" itemprop="url" rel="index"><span itemprop="name">Mac技巧</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/04/24/%E7%BB%99Mac%E5%8E%9F%E7%94%9F%E8%AF%8D%E5%85%B8%E6%89%A9%E5%B1%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/24/%E7%BB%99Mac%E5%8E%9F%E7%94%9F%E8%AF%8D%E5%85%B8%E6%89%A9%E5%B1%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>783</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>使用Mac的小伙伴，经常会用到各种词典（比如欧陆，有道等等）来查询英文单词，但是我用过后都觉得他们都不太好用，主要是跟Mac不太融合，或者要记住各种快捷键，或者要频繁开关。</p>
-<p>直到前几天偶然问了另一个用Mac的小伙伴，她给我推荐了苹果自带的词典软件，用过之后发现真的很方便！只需要把光标置于你想释义的词上面，再用三个指头同时按下触摸板，就会跳出词典的解释。超级帅的有木有！【如图：查询与数据监测器】</p>
-<p><img src="/img/d1.png" alt=""></p>
-<p>唯一的不足可能是内置词典不够多，但是找了一圈发现词典包可以完美解决这个问题。有了词典包，你可以随心所欲的添加牛津、朗文、英汉、汉英、法汉、德汉、汉法、汉德、日汉、汉日；甚至康熙大辞典，以及湘雅医学专业词典。只要你能找到合适的词典包即可进行扩展。</p>
-<p>写这篇文章的原因是网上大部分的教程，不是要收费，就是要自己解析词典变成可以添加到Mac词典里的文件。对小白非常不友好，所以本篇提供可以直接下载的文件，拖拽到<code>Dictionary</code>文件夹即可。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/24/%E7%BB%99Mac%E5%8E%9F%E7%94%9F%E8%AF%8D%E5%85%B8%E6%89%A9%E5%B1%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/22/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E6%AF%8F%E6%97%A5%E7%AD%94%E9%A2%98%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/portrait.JPG">
-      <meta itemprop="name" content="Eric Yin">
-      <meta itemprop="description" content="Stay hungry, Stay foolish">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eric's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/22/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E6%AF%8F%E6%97%A5%E7%AD%94%E9%A2%98%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/" class="post-title-link" itemprop="url">一亩三分地每日答题（更新中）</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-22 16:46:19" itemprop="dateCreated datePublished" datetime="2020-04-22T16:46:19+08:00">2020-04-22</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-02 16:34:16" itemprop="dateModified" datetime="2020-07-02T16:34:16+08:00">2020-07-02</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0/" itemprop="url" rel="index"><span itemprop="name">一亩三分地</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/04/22/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E6%AF%8F%E6%97%A5%E7%AD%94%E9%A2%98%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/22/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E6%AF%8F%E6%97%A5%E7%AD%94%E9%A2%98%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="两步获得答案"><a href="#两步获得答案" class="headerlink" title="两步获得答案"></a>两步获得答案</h3><ul>
-<li>点击<strong>阅读原文</strong></li>
-<li>使用<strong>查询</strong>快捷键（win：<code>Ctrl+F</code>; Mac：<code>command+F</code>）匹配题目</li>
-</ul>
-<ol>
-<li><p>【题目】地里面经数目最多的是哪家公司？</p>
-<blockquote>
-<p>Amazon</p>
-</blockquote>
-</li>
-<li><p>【题目】地里数据科学类职位面经放在在什么版最合理？</p>
-<blockquote>
-<p>数科面经版</p>
-</blockquote>
-</li>
-<li><p>【题目】下面哪个公司总部不在湾区？</p>
-<blockquote>
-<p>snapchat</p>
-</blockquote>
-</li>
-</ol>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/22/%E4%B8%80%E4%BA%A9%E4%B8%89%E5%88%86%E5%9C%B0%E6%AF%8F%E6%97%A5%E7%AD%94%E9%A2%98%EF%BC%88%E6%9B%B4%E6%96%B0%E4%B8%AD%EF%BC%89/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/portrait.JPG">
-      <meta itemprop="name" content="Eric Yin">
-      <meta itemprop="description" content="Stay hungry, Stay foolish">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eric's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/20/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2/" class="post-title-link" itemprop="url">如何用hexo写博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-20 16:16:55" itemprop="dateCreated datePublished" datetime="2020-04-20T16:16:55+08:00">2020-04-20</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-21 18:08:13" itemprop="dateModified" datetime="2020-04-21T18:08:13+08:00">2020-04-21</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/hexo/" itemprop="url" rel="index"><span itemprop="name">hexo</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/04/20/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/20/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>716</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><h4 id="1-command-line"><a href="#1-command-line" class="headerlink" title="1.  command line"></a>1.  command line</h4><blockquote>
-<p><code>hexo new &quot;title&quot;</code></p>
-</blockquote>
-<p> 生成新文章在 \source_posts\title.md 用markdown编辑器打开可以编辑</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">title: 文章标题  # 文章页面上的显示名称, 可以任意修改, 不会出现在URL中</span><br><span class="line">date: 2020-02-02 20:13:14  # 文章生成时间, 一般不改</span><br><span class="line">categories: diary  # 文章分类目录, 多个分类使用[a,b,c]这种格式</span><br><span class="line">tags: [Hexo,diary]  # 文章标签</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">#这里开始使用markdown格式输入你的正文.</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line">#more标签以下的内容要点击“阅读全文”才能看见</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/20/%E5%A6%82%E4%BD%95%E7%94%A8hexo%E5%86%99%E5%8D%9A%E5%AE%A2/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/19/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/portrait.JPG">
-      <meta itemprop="name" content="Eric Yin">
-      <meta itemprop="description" content="Stay hungry, Stay foolish">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eric's Blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/19/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-19 15:47:24" itemprop="dateCreated datePublished" datetime="2020-04-19T15:47:24+08:00">2020-04-19</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-20 16:45:29" itemprop="dateModified" datetime="2020-04-20T16:45:29+08:00">2020-04-20</time>
-              </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/04/19/hello-world/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/19/hello-world/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>357</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/19/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
 
           </div>
           
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -1031,6 +364,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Greatest-Developer-Fallacy-Or-The-Wisest-Words-You’ll-Ever-Hear"><span class="nav-number">2.</span> <span class="nav-text">The Greatest Developer Fallacy Or The Wisest Words You’ll Ever Hear?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“我会在我需要的时候再学！“-开发者最大的谬论还是真理？"><span class="nav-number">3.</span> <span class="nav-text">“我会在我需要的时候再学！“ 开发者最大的谬论还是真理？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Investing-In-Your-Future-投资你的未来"><span class="nav-number">4.</span> <span class="nav-text">Investing In Your Future 投资你的未来</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-Don’t-Know-What-You-Don’t-Know-你不知道你不知道的"><span class="nav-number">5.</span> <span class="nav-text">You Don’t Know What You Don’t Know 你不知道你不知道的</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Can-You-Learn-It-Fast-Enough"><span class="nav-number">6.</span> <span class="nav-text">Can You Learn It Fast Enough</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Why-Should-I-Care"><span class="nav-number">7.</span> <span class="nav-text">Why Should I Care</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
