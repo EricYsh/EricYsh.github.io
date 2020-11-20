@@ -166,6 +166,121 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/13/%E8%A7%A3%E5%86%B3MacOS%E5%8D%87%E7%BA%A7big-sur-%E5%90%8E%E5%87%BA%E7%8E%B0xcrun-error-invalid-active-developer-path-%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/portrait.JPG">
+      <meta itemprop="name" content="Eric Yin">
+      <meta itemprop="description" content="Stay hungry, Stay foolish">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eric's Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/11/13/%E8%A7%A3%E5%86%B3MacOS%E5%8D%87%E7%BA%A7big-sur-%E5%90%8E%E5%87%BA%E7%8E%B0xcrun-error-invalid-active-developer-path-%E7%9A%84%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">解决MacOS升级 Big Sur 后出现xcrun: error: invalid active developer path 的问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-11-13 22:37:47" itemprop="dateCreated datePublished" datetime="2020-11-13T22:37:47+08:00">2020-11-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-20 21:33:42" itemprop="dateModified" datetime="2020-11-20T21:33:42+08:00">2020-11-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/macOS%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">macOS编程</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/11/13/%E8%A7%A3%E5%86%B3MacOS%E5%8D%87%E7%BA%A7big-sur-%E5%90%8E%E5%87%BA%E7%8E%B0xcrun-error-invalid-active-developer-path-%E7%9A%84%E9%97%AE%E9%A2%98/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/11/13/%E8%A7%A3%E5%86%B3MacOS%E5%8D%87%E7%BA%A7big-sur-%E5%90%8E%E5%87%BA%E7%8E%B0xcrun-error-invalid-active-developer-path-%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>439</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>今天升级macOS Big Sur，终端里使用git的时候，弹出一行错误：</p>
+<blockquote>
+<p>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
+</blockquote>
+<p>解决方法，更新 Xcode Command-line Tools 即可。</p>
+<p>进入终端，写下如下命令即可：</p>
+<figure class="highlight plain"><figcaption><span>--installxcode-select --installxcode-select --install</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+
+<p>你会看到这个返回：</p>
+<blockquote>
+<p>xcode-select: note: install requested for command line developer tools</p>
+</blockquote>
+<p>然后就会有新窗口跳转出来，按提示更新即可。</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>更新 macOS Big Sur 后，有一些些 bug ，如果手头 Mac 是主力机的朋友们，建议观望一个月后再更新。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/08/iTerm-oh-my-zsh-%E6%89%93%E9%80%A0Mac%E5%BC%BA%E5%A4%A7%E7%BB%88%E7%AB%AF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1043,7 +1158,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">8</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1056,7 +1171,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
